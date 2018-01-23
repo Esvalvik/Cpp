@@ -12,6 +12,7 @@ public:
 	
 	void startGame();
 	void run();
+	void validateInput(int& players);
 
 private:
 	
