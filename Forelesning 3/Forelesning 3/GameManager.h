@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <memory>
 #include "PlayerCharacter.h"
 class GameManager
 {
@@ -21,6 +22,6 @@ private:
 	GameManager(const GameManager&) = delete;	// Copy constructor is deleted.
 	GameManager& operator=(const GameManager&) = delete;  // Assign operator is deleted.
 	
-	vector<PlayerCharacter> m_players;
+	vector<shared_ptr<PlayerCharacter>> m_players;
 };
 
