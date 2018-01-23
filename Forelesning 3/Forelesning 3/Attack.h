@@ -11,4 +11,3 @@ private:
 	int m_damage;
 	int m_cooldown;
 };
-

@@ -10,3 +10,4 @@ PlayerCharacterView::PlayerCharacterView()
 PlayerCharacterView::~PlayerCharacterView()
 {
 }
+

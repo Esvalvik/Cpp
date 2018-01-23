@@ -5,7 +5,6 @@ public:
 	PlayerCharacterView();
 	~PlayerCharacterView();
 
-	void promtAction();
+	void promptAction();
 	void printStatus();
 };
-
