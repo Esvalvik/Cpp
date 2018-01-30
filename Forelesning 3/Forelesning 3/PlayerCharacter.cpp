@@ -16,18 +16,11 @@ void PlayerCharacter::runTurn()
 {
 }
 
-void PlayerCharacter::hit()
-{
-}
-
-void PlayerCharacter::addAttack()
-{
-}
-
 void PlayerCharacter::getAttacks() const
 {
 }
 
-void PlayerCharacter::getHP() const
+int PlayerCharacter::getHP() const
 {
+	return m_hp;
 }
