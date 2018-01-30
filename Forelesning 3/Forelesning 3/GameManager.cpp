@@ -24,7 +24,13 @@ void GameManager::startGame()
 	}
 }
 
-	
+void GameManager::run() 
+{
+	while (isRunning) 
+	{
+		
+	}
+}
 
 void GameManager::validateInput(int& players)
 {

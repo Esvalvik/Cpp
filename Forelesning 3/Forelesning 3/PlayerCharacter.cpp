@@ -11,3 +11,23 @@ PlayerCharacter::PlayerCharacter(int hp, string name)
 PlayerCharacter::~PlayerCharacter()
 {
 }
+
+void PlayerCharacter::runTurn()
+{
+}
+
+void PlayerCharacter::hit()
+{
+}
+
+void PlayerCharacter::addAttack()
+{
+}
+
+void PlayerCharacter::getAttacks() const
+{
+}
+
+void PlayerCharacter::getHP() const
+{
+}

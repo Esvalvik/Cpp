@@ -23,5 +23,6 @@ private:
 	GameManager& operator=(const GameManager&) = delete;  // Assign operator is deleted.
 	
 	vector<shared_ptr<PlayerCharacter>> m_players;
+	bool isRunning = true;
 };
 
