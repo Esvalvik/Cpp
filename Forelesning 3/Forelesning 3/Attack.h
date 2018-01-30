@@ -8,6 +8,7 @@ public:
 	bool isReady();
 
 private:
+	string m_name;
 	int m_damage;
 	int m_cooldown;
 };
