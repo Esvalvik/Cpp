@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameManager.h"
+#include "PlayerCharacter.h"
 
 void GameManager::startGame()
 {
@@ -30,7 +31,10 @@ void GameManager::run()
 {
 	while (isRunning) 
 	{
-		
+		for (auto player : m_players)
+		{
+			player->printInfo();
+		}
 	}
 }
 
