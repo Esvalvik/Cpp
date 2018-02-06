@@ -24,7 +24,11 @@ void GameManager::startGame()
 		m_players.push_back(tmp);
 		cout << "Character name: " << name << " created" << endl;
 	}
-	run();
+
+	//auto lFunc = [](int yo = 10) {cout << yo << endl; };
+	//lFunc();
+
+	//run();
 }
 
 void GameManager::run() 
