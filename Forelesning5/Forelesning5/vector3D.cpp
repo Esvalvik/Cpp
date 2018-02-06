@@ -1,26 +1,26 @@
 // vector3D.cpp
-
-#include <cmath>  // Lets us use math functions: sqrtf(...), pow(...).
+#include "stdafx.h"
 #include "vector3D.h"
-
+#include <cmath> 
 
 Vector3D::Vector3D()
 {
 	SetCoordinates(0.0, 0.0, 0.0);
 }
 
+Vector3D::Vector3D(T x, T y, T z)
+{
+}
 
 Vector3D::Vector3D(float x, float y, float z)
 {
 	SetCoordinates(x, y, z);
 }
 
-
 Vector3D::Vector3D(const float coords[3])
 {
 	SetCoordinates(coords[0], coords[1], coords[2]);
 }
-
 
 istream &operator>>(istream& inStream, Vector3D& v)
 {
@@ -33,7 +33,6 @@ istream &operator>>(istream& inStream, Vector3D& v)
 	return inStream;
 }
 
-
 // Prints on form: "(x, y, z)"
 ostream &operator<<(ostream& outStream, const Vector3D& v)
 {
@@ -41,13 +40,11 @@ ostream &operator<<(ostream& outStream, const Vector3D& v)
 	return outStream;
 }
 
-
 float Vector3D::Length() const
 {
 	//return sqrtf(pow(m_x, 2) + pow(m_y, 2) + pow(m_z, 2));
 	return sqrtf((m_x * m_x) + (m_y * m_y) + (m_z * m_z));
 }
-
 
 bool Vector3D::operator==(const Vector3D& v) const
 {

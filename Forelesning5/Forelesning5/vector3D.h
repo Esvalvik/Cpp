@@ -1,24 +1,25 @@
 // vector3D.h
 #ifndef VECTOR3Dm_H
 #define VECTOR3Dm_H
-
+#include "stdafx.h"
 #include <iostream>  // Lets us use, istream, ostream, cin, cout.
 using std::istream;
 using std::ostream;
 using std::cin;
 using std::cout;
 
-
+template <typename T>
 class Vector3D
 {
+
 private:
-	friend Vector3D operator*(float scalar, const Vector3D& v);  // NEW Multiply, version 2: scalar * vector.
+	friend Vector3D operator*(T scalar, const Vector3D& v);  // NEW Multiply, version 2: scalar * vector.
 	friend istream& operator>>(istream& inStream, Vector3D& v);  // NEW "InputFromCin".
 	friend ostream& operator<<(ostream& outStream, const Vector3D& v);  // NEW "OutputToCout".
 
 public:
 	Vector3D();
-	Vector3D(float x, float y, float z);
+	Vector3D(T x, T y, T z);
 	Vector3D(const float coords[3]);
 
 	float Length() const;
@@ -35,7 +36,7 @@ public:
 	void CopyToFloatArray(float copy[3]) const;
 
 private:
-	void SetCoordinates(float x, float y, float z) { m_x = x; m_y = y; m_z = z; }
+	void SetCoordinates(T x, T y, T z) { m_x = x; m_y = y; m_z = z; }
 
 	float m_x;
 	float m_y;
