@@ -15,8 +15,8 @@ public:
 	void addAttack(Attack attack);
 	void getAttacks() const;
 	int getHP() const;
+	void printInfo();
 private:
-	int m_attacks;
 	int m_hp;
 	string m_name;
 	vector<shared_ptr<Attack>> m_attacks;

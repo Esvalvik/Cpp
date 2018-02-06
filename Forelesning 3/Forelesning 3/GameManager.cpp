@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameManager.h"
+#include "PlayerCharacter.h"
 
 void GameManager::startGame()
 {
@@ -13,6 +14,7 @@ void GameManager::startGame()
 		validateInput(players);
 	}
 	cout << "Number of players: " << players << endl;
+
 	for(int i = 0; i < players; i++)
 	{
 		cout << "Player " << i + 1 << " name: " << endl;
@@ -22,13 +24,17 @@ void GameManager::startGame()
 		m_players.push_back(tmp);
 		cout << "Character name: " << name << " created" << endl;
 	}
+	run();
 }
 
 void GameManager::run() 
 {
 	while (isRunning) 
 	{
-		
+		for (auto player : m_players)
+		{
+			player->printInfo();
+		}
 	}
 }
 
