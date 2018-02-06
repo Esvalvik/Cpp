@@ -16,6 +16,22 @@ void PlayerCharacter::runTurn()
 {
 }
 
+void PlayerCharacter::hit(int hp)
+{
+	if ((m_hp - hp) < 0) 
+	{
+		m_hp = 0;
+	}
+	else 
+	{
+		m_hp -= hp;
+	}
+}
+
+void PlayerCharacter::addAttack(Attack attack)
+{
+}
+
 void PlayerCharacter::getAttacks() const
 {
 }

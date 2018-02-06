@@ -9,3 +9,12 @@ Attack::Attack()
 Attack::~Attack()
 {
 }
+
+void Attack::run()
+{
+}
+
+bool Attack::isReady()
+{
+	return false;
+}

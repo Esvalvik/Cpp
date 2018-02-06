@@ -3,6 +3,7 @@ class Attack
 {
 public:
 	Attack();
+	Attack(string name, int dmg, int cooldown);
 	~Attack();
 	void run();
 	bool isReady();
