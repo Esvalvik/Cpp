@@ -20,20 +20,20 @@ private:
 public:
 	Vector3D();
 	Vector3D(T x, T y, T z);
-	Vector3D(const float coords[3]);
+	Vector3D(const T coords[3]);
 
-	float Length() const;
+	T Length() const;
 	void Normalize();
 
 	bool operator==(const Vector3D& v) const;  // NEW "Equals".
 	bool operator!=(const Vector3D& v) const;  // NEW "!Equals".
 	Vector3D operator+(const Vector3D& v) const;  // NEW "Add".
 	Vector3D operator-(const Vector3D& v) const;  // NEW "Subtract".
-	Vector3D operator*(float scalar) const;  // NEW "Multiply", version 1: vector * scalar. 
+	Vector3D operator*(T scalar) const;  // NEW "Multiply", version 1: vector * scalar. 
 	float operator*(const Vector3D& v) const;  // NEW "Dot".
 
-	operator const float*() const;  // NEW "ToFloatPtr".
-	void CopyToFloatArray(float copy[3]) const;
+	operator const T*() const;  // NEW "ToFloatPtr".
+	void CopyToFloatArray(T copy[3]) const;
 
 private:
 	void SetCoordinates(T x, T y, T z) { m_x = x; m_y = y; m_z = z; }
